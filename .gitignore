@@ -4,8 +4,8 @@
 *.suo
 *.vcxproj*
 *.DS_Store
-*/out
-*/.idea
-*/Release
-*/x64
-*/Debug
+**/out/
+**/.idea/
+**/Release/
+**/x64/
+**/Debug/
