@@ -1,0 +1,11 @@
+*.iml
+*.sdf
+*.sln
+*.suo
+*.vcxproj*
+*.DS_Store
+*/out
+*/.idea
+*/Release
+*/x64
+*/Debug

@@ -1,0 +1,22 @@
+﻿Build started 25.11.2013 1:31:35.
+     1>Project "c:\Users\anton galaev\documents\visual studio 2013\Projects\AudioJNI\AudioJNI\AudioJNI.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /I"C:\Program Files\Java\jdk1.7.0_45\include" /I"C:\Program Files\Java\jdk1.7.0_45\include\win32" /Zi /nologo /W3 /WX- /sdl /O2 /Oi /GL /D _WINDLL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Release\\" /Fd"x64\Release\vc120.pdb" /Gd /TP /errorReport:prompt com_galaev_audio_AudioApiWrapper.cpp
+         com_galaev_audio_AudioApiWrapper.cpp
+     1>com_galaev_audio_AudioApiWrapper.cpp(100): warning C4018: '<' : signed/unsigned mismatch
+     1>com_galaev_audio_AudioApiWrapper.cpp(124): warning C4018: '<' : signed/unsigned mismatch
+     1>com_galaev_audio_AudioApiWrapper.cpp(145): warning C4018: '<' : signed/unsigned mismatch
+     1>com_galaev_audio_AudioApiWrapper.cpp(169): warning C4018: '<' : signed/unsigned mismatch
+     1>com_galaev_audio_AudioApiWrapper.cpp(188): warning C4018: '<' : signed/unsigned mismatch
+     1>com_galaev_audio_AudioApiWrapper.cpp(216): warning C4018: '<' : signed/unsigned mismatch
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"c:\users\anton galaev\documents\visual studio 2013\Projects\AudioJNI\x64\Release\AudioJNI.dll" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"c:\users\anton galaev\documents\visual studio 2013\Projects\AudioJNI\x64\Release\AudioJNI.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"c:\users\anton galaev\documents\visual studio 2013\Projects\AudioJNI\x64\Release\AudioJNI.lib" /MACHINE:X64 /DLL x64\Release\com_galaev_audio_AudioApiWrapper.obj
+            Creating library c:\users\anton galaev\documents\visual studio 2013\Projects\AudioJNI\x64\Release\AudioJNI.lib and object c:\users\anton galaev\documents\visual studio 2013\Projects\AudioJNI\x64\Release\AudioJNI.exp
+         Generating code
+         Finished generating code
+         AudioJNI.vcxproj -> c:\users\anton galaev\documents\visual studio 2013\Projects\AudioJNI\x64\Release\AudioJNI.dll
+     1>Done Building Project "c:\Users\anton galaev\documents\visual studio 2013\Projects\AudioJNI\AudioJNI\AudioJNI.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.40
