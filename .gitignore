@@ -1,0 +1,9 @@
+*.iml
+*.sdf
+*.sln
+*.suo
+*.vcxproj*
+/out
+/.idea
+/Release
+/x64
