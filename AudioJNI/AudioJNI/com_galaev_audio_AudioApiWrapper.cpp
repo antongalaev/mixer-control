@@ -3,6 +3,7 @@
 #include <math.h>
 #include <windows.h>
 #include <mmdeviceapi.h>
+#include <devicetopology.h>
 #include <endpointvolume.h>
 
 IAudioEndpointVolume* getIAudioEndpointVolume() {
@@ -253,7 +254,7 @@ JNIEXPORT jfloat JNICALL Java_com_galaev_audio_AudioApiWrapper_getBassMax
 
 extern "C"
 JNIEXPORT jfloat JNICALL Java_com_galaev_audio_AudioApiWrapper_getBassStepping
-(JNIEnv *, jclass){
+(JNIEnv *env, jclass cl){
 	return getBassLevelRange(false, false);
 }
 
@@ -271,6 +272,6 @@ JNIEXPORT jfloat JNICALL Java_com_galaev_audio_AudioApiWrapper_getTrebleMax
 
 extern "C"
 JNIEXPORT jfloat JNICALL Java_com_galaev_audio_AudioApiWrapper_getTrebleStepping
-(JNIEnv *, jclass){
+(JNIEnv *env, jclass cl){
 	return getTrebleLevelRange(false, false);
 }

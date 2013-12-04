@@ -1,5 +1,6 @@
 package com.galaev.audio;
 
+import javax.swing.*;
 import java.io.*;
 
 /**
@@ -18,40 +19,38 @@ public class AudioApiWrapper {
         } else {
             name = DLL_64;
         }
-        String outPath = System.getProperty("java.io.tmpdir") + "audiojni"  + File.separator + name;
+        String outPath = System.getProperty("java.io.tmpdir") + "audiojni"  + File.separator;
         try {
-            System.load(outPath);
-        } catch (UnsatisfiedLinkError e) {
             loadDllFromJar(name, outPath);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e,
+                    "Предупреждение", JOptionPane.INFORMATION_MESSAGE);
+            e.printStackTrace();
         }
     }
 
-    private static void loadDllFromJar(String name, String outPath) {
-        try{
-            InputStream in = AudioApiWrapper.class.getResourceAsStream("/native/" + name);
-            File tempPath = new File(System.getProperty("java.io.tmpdir") + "audiojni");
-            if (! tempPath.exists()) {
-                tempPath.mkdir();
-            }
-            File fileOut = new File(outPath);
-            if (fileOut.exists()) {
-                fileOut.delete();
-            }
-            fileOut.createNewFile();
-            FileOutputStream out = new FileOutputStream(fileOut);
-
-            // writing
-            byte[] buffer = new byte[1024];
-            int read;
-            while((read = in.read(buffer)) != -1) {
-                out.write(buffer, 0, read);
-            }
-            in.close();
-            out.close();
-            System.load(fileOut.toString());
-        } catch (Exception e) {
-            e.printStackTrace();
+    private static void loadDllFromJar(String name, String outPath) throws IOException {
+        InputStream in = AudioApiWrapper.class.getResourceAsStream("/native/" + name);
+        File tempPath = new File(outPath);
+        if (! tempPath.exists()) {
+            tempPath.mkdir();
         }
+        File fileOut = new File(outPath + name);
+        if (fileOut.exists()) {
+            fileOut.delete();
+        }
+        fileOut.createNewFile();
+        FileOutputStream out = new FileOutputStream(fileOut);
+
+        // writing
+        byte[] buffer = new byte[1024];
+        int read;
+        while((read = in.read(buffer)) != -1) {
+            out.write(buffer, 0, read);
+        }
+        in.close();
+        out.close();
+        System.load(fileOut.toString());
     }
 
     public static native boolean getMute();
