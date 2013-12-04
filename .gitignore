@@ -2,6 +2,7 @@
 *.sdf
 *.sln
 *.suo
+*.opensdf
 *.vcxproj*
 *.DS_Store
 **/out/
